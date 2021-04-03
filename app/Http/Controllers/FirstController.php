@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Auth;
 use App\Models\diy;
-
+use App\Models\Video;
 use App\Models\User;
+use App\Models\Planete;
 use Illuminate\Http\Request;
 
 class FirstController extends Controller
@@ -14,7 +16,10 @@ class FirstController extends Controller
     }
 
     public function game(){
-      return view("firstcontroller.game");
+
+      $planete = Planete::all();
+      
+      return view("firstcontroller.game", ["planete" => $planete]);
     }
 
     public function contact(){
@@ -65,5 +70,20 @@ class FirstController extends Controller
       $profil = User::findOrFail($id);
       $data = User::all();
       return view("firstcontroller.profil", ["data" => $data]);
+    }
+
+    public function video($id){
+      $video = Video::findOrFail($id);
+
+                    ;
+      return view("firstcontroller.video", ["video" => $video]);
+    }
+
+    public function nextStep(){
+      $id = Auth::id();
+      $update = User::where('id', $id);
+      $update->increment('step_vid');
+
+      return redirect('/game');
     }
 }

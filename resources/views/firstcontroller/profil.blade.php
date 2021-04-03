@@ -9,8 +9,9 @@
 
 
   <h1>Mon nom est : {{ $p->name}} {{$p->prenom }}</h1>
-  <?php $pro = $p->step_story/4*100 ?>
-  <h1>Aventure:{{$pro}}%</h1>
+  <?php $pro = Auth::user()->step_vid/5*100;  ?>
+  <h1>Aventure : {{$pro}}%</h1>
+
   <h1>Planétes visités : {{$p->step_vid}}</h1>
 
 @endforeach

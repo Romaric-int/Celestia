@@ -846,3 +846,82 @@ ul  {
   background-size: cover;
   text-align: center;
 }
+
+/*gamepage
+!!
+!
+!
+!
+!
+*/
+
+.flex-planet {
+  display:flex;
+  position: relative;
+  top: 28%;
+  width: 3700px;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+
+
+}
+
+.planete{
+  width: 30rem;
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.planete:nth-child(1){
+  margin-left: 8rem;
+}
+
+.planete:nth-child(2){
+  position: relative;
+  top: -4rem;
+  margin-right: 7rem;
+  margin-left: 17rem;
+}
+.planete:nth-child(3){
+  position: relative;
+
+
+}
+.planete:nth-child(3) img:nth-child(2){
+  display: none;
+
+
+}
+
+.planete:nth-child(4){
+  position: relative;
+  top: -5rem;
+
+}
+
+.planete:nth-child(5){
+  position: relative;
+  top: -0.5rem;
+
+}
+
+.planete:nth-child(6){
+  position: relative;
+  top: 4rem;
+
+}
+
+.story-text{
+
+}
+
+.text-laika {
+  padding: 2rem 20rem 2rem 20rem;
+  border-radius: 55px;
+  visibility: hidden;background-color: #D5C1ED;
+  margin-top: 12rem;
+
+}

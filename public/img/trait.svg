@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3683" height="1081" viewBox="0 0 3683 1081">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.75" gradientTransform="translate(0.151 0.167) scale(0.667)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#233347"/>
+      <stop offset="1" stop-color="#17212d"/>
+    </radialGradient>
+  </defs>
+  <rect id="Rectangle_1" data-name="Rectangle 1" width="3683" height="1081" fill="url(#radial-gradient)"/>
+  <path id="Tracé_1354" data-name="Tracé 1354" d="M4439.815,685.407s67.7-38.427,470.221-78.679,573.2-40.309,1003.418-.057S6825.176,786.5,6825.176,786.5" transform="translate(-3470.698 -23.559)" fill="none" stroke="#e3dcdc" stroke-width="1" stroke-dasharray="7"/>
+</svg>
