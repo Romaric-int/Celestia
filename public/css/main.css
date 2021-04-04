@@ -59,11 +59,28 @@ body {
   left: -13rem;
 }
 
+.logout_header{
+  position: relative;
+}
+
+.logout_header {
+  position: relative;
+
+}
+
+.btn_profil{
+  z-index: 50;
+
+}
+
 .profil-header{
   display: flex;
   flex-direction: column;
+  position:  relative;
   color: white;
-  background-color: #484991;
+
+background-color:  #484991;
+  z-index: 50;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
   padding: 1rem 2.5rem 1rem 2.5rem;
   border-bottom-left-radius: 20%;
@@ -71,11 +88,32 @@ body {
   position: relative;
 }
 
+
+
 .profil-header:hover{
   background-color: #ECE1F2;
   transition: 0.5s;
   color: black;
+
 }
+
+.btn-log{
+  position: relative;
+  z-index: 1;
+  top: -30%;
+  visibility: hidden;
+  transition-duration: 0.5s;
+
+}
+
+.logout_header:hover .btn-log{
+  visibility: visible !important;
+  top: 0;
+
+
+}
+
+
 
 .page-header > img {
   width: 30px;
@@ -88,7 +126,7 @@ body {
 .page-header > h1 {
   position: relative;
   top: -45%;
-  font-family: "Fredoka One";
+    font-family: "Fredoka One";
   font-weight: lighter;
   color: #47488D;
 
@@ -139,9 +177,15 @@ a {
 !
 */
 
+
+.ilu_contact{
+position: absolute;
+top: 15%;
+left: 60%;
+}
 .titre-contact {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 4rem;
+  font-size: 7rem;
   position: absolute;
   left: 10%;
   top: 20%;
@@ -151,8 +195,8 @@ a {
 .introduction h2{
   color: #484991;
   position: absolute;
-  left: 30%;
-  top: 35%;
+  left: 25%;
+  top: 36%;
   font-size: 2.5rem;
   max-width: 700px;
 
@@ -164,6 +208,7 @@ a {
   position: absolute;
   left: 20%;
   top: 55%;
+  text-align: center;
 }
 .intro-us {
   display: flex;
@@ -297,7 +342,26 @@ input[type=button]:hover {
 
 
 }
+
+.intro-txt2 {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 30%;
+  left: 5%;
+  text-transform: uppercase;
+  z-index: 50;
+  text-align: center;
+  color: #484991;
+
+
+}
+
 .intro-txt > h1 {
+  font-size: 110px;
+  font-family: "Fredoka One";
+}
+.intro-txt2 > h1 {
   font-size: 110px;
   font-family: "Fredoka One";
 }
@@ -306,7 +370,20 @@ input[type=button]:hover {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+.intro-txt2 > h3 {
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .intro-txt > a {
+  font-size: 20px;
+  color: white;
+  background-color: #484991;
+  border-radius: 30px;
+  padding: 20 70 20 70;
+
+}
+.intro-txt2 > a {
   font-size: 20px;
   color: white;
   background-color: #484991;
@@ -323,6 +400,16 @@ input[type=button]:hover {
     color: #484991;
 
 }
+
+.blur{
+  filter: blur(2.5rem);
+  opacity: 1;
+  transition-duration: 0.5s;
+  opacity: 0.3;
+
+}
+
+
 
 
 
@@ -399,7 +486,8 @@ input[type=button]:hover {
   display: flex;
   position: relative;
   align-items: center;
-  padding-top: 90px;
+  margin-right: 10rem;
+  padding-top: 10rem;
 }
 .laika-flex >  h1 {
   font-size: 50px;
@@ -419,10 +507,11 @@ input[type=button]:hover {
 
 .pre-laika > p {
   font-size: 35px;
+  margin-top: 3rem;
   max-width: 595px;
   text-align: center;
   color: #DEC6EB;
-  padding-bottom: 200px;
+  padding-bottom: 10rem;
 }
 
 #tete_contente {
@@ -441,15 +530,18 @@ input[type=button]:hover {
 
 #trait-i {
   position: absolute;
-  top: 3620px;
+
   overflow: hidden;
-  max-width: 1900px;
+  top: 20%;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   left: -10%;
 }
 .index-nav-menu {
   background-image: linear-gradient(#766BA7,20%,#383969);
   overflow: hidden;
+  position: relative;
 
 
 
@@ -489,6 +581,7 @@ input[type=button]:hover {
   align-items: center;
   overflow: hidden;
   z-index: 20;
+  position: relative;
 }
 
 .txt-menu {
@@ -509,12 +602,25 @@ input[type=button]:hover {
 .txt-menu1 {
   margin-left: 100px;
 }
+.menu1 img {
+  margin-left: 100px;
+}
 .txt-menu2 {
   margin-right: 100px;
+  z-index: 50;
 }
 .text-menu3 {
   position: relative;
-  left: 10%;
+  left: 0%;
+}
+.img-menu1{
+  position: relative;
+  left: 5%;
+}
+
+.img-menu2{
+  position: relative;
+  right: 7%;
 }
 
 .menu3 {
@@ -707,6 +813,17 @@ input[type=button]:hover {
   margin-top: 20px;
 }
 
+.btn_diy:hover {
+  background-color: #A9478D;
+  transition-duration: 0.3s;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
 .solo_diy > div > h2  {
   font-size: 32px;
   font-family: "Fredoka One";
@@ -715,6 +832,19 @@ input[type=button]:hover {
 .solo_diy > div {
   margin-bottom: 20px;
 }
+
+.solo_diy > div > img {
+  width: 22rem;
+}
+
+.solo_diy:nth-child(1) > div > img {
+  width: 20rem;
+}
+
+.solo_diy:nth-child(3) > div > img {
+  width: 20rem;
+}
+
 
 .footer_d_game {
   margin-top: 100px;
@@ -745,6 +875,11 @@ input[type=button]:hover {
   position: relative;
   margin-top: 100px;
   margin-bottom: 50px;
+}
+
+.prep_diy img  {
+  width: 40%;
+
 }
 
 .prep_diy>h1 {
@@ -876,22 +1011,23 @@ ul  {
 }
 
 .planete:nth-child(1){
-  margin-left: 8rem;
+  margin-left: 25rem;
 }
 
 .planete:nth-child(2){
   position: relative;
   top: -4rem;
-  margin-right: 7rem;
-  margin-left: 17rem;
+  margin-right: 13rem;
+  margin-left: 19rem;
 }
 .planete:nth-child(3){
   position: relative;
+  top: -7rem;
 
 
 }
 .planete:nth-child(3) img:nth-child(2){
-  display: none;
+
 
 
 }
@@ -914,14 +1050,57 @@ ul  {
 
 }
 
-.story-text{
+
+.num-planete{
+  filter: grayscale(100%);
+}
+
+.img-planete{
+  filter: grayscale(100%);
+}
+
+.img-planete:hover{
+  filter: grayscale(0%);
+  transition-duration: 0.8s;
+   transform: scale(1.1);
+}
+
+
+
+
+.text-laika {
+  padding: 2rem 10rem 2rem 10rem;
+  border-radius: 55px;
+  visibility: hidden;
+  background-color: #D5C1ED;
+  margin-top: 12rem;
 
 }
 
-.text-laika {
-  padding: 2rem 20rem 2rem 20rem;
-  border-radius: 55px;
-  visibility: hidden;background-color: #D5C1ED;
-  margin-top: 12rem;
 
+/*page-vidéo*/
+
+.page-video{
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.page-video .titre-video{
+  font-size: 5rem;
+  font-family: "Fredoka One";
+  font-weight: lighter;
+
+}
+
+.page-video p {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  max-width: 50%;
+  margin-bottom: 2rem;
+}
+
+.page-video a  {
+  color:
 }

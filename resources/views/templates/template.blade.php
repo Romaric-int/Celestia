@@ -63,16 +63,16 @@
         <div class="logout_header">
 
 
-          <a href="/profil/{{Auth::id()}}"><div class="profil-header">
+          <a class="btn_profil" href="/profil/{{Auth::id()}}"><div class="profil-header">
             <img src="{{ Auth::user()->avatar }}" alt="avatar" width="100" height="100">
             <h2>{{ Auth::user()->prenom }}</h2>
 
 
           </div></a>
-          <a class="btn btn_diy" href="{{ route('logout') }}"
+          <a class="btn-log btn btn_diy" href="{{ route('logout') }}"
              onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
-              {{ __('Logout') }}
+              {{ __('Deconnexion') }}
           </a>
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

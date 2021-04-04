@@ -6,10 +6,12 @@
 
 @if(Auth::check())
 
+
+
 @foreach($planete as $p)
     <div class="planete planete{{$p->id}}">
-      <a href="/game/{{$p->id}}"><img src="{{$p->planete}}" alt="planete{{$p->id}}"></a>
-      <img class="num-planete" src="{{$p->numImg}}" alt="numero{{$p->id}}">
+      <a href="/game/{{$p->id}}"><img src="{{$p->planete}}" class="img-planete img-planete{{$p->id}}"alt="planete{{$p->id}}"></a>
+      <img class="num-planete num-planete{{$p->id}}" src="{{$p->numImg}}" alt="numero{{$p->id}}">
       <div class="story-text story-text{{$p->id}}">
         <p class="text-laika text-laika{{$p->id}}">{{$p->storyText}}</p>
       </div>
@@ -17,22 +19,43 @@
 @endforeach
 
 <?php
+
+
 $tab = [2,3,4,5,6];
 
 for ($i=0; $i < 5; $i++) {
-  if (Auth::user()->step_vid == $i) {
-    for ($j=Auth::user()->step_vid; $j < count($tab); $j++) {
+  if (Auth::user()->step_vid == $i){
+    for ($j=Auth::user()->step_vid; $j < count($tab); $j++){
       echo "<style media='screen'>
         .planete".$tab[$j]."{
         filter: blur(4px);
         cursor: default;
         pointer-events: none;
+
       }</style>";
     };
+
+    $e = $i+1;
     echo "<style  media='screen'>
-    .text-laika".$i."{
+    .text-laika".$e."{
       visibility: visible;
-    }";
+
+    }</style>
+    ";
+    $step = Auth::user()->step_vid;
+
+    for ($i=1; $i < $step+1; $i++) {
+    echo "<style  media='screen'>
+    .num-planete".$i." {
+
+    filter: grayscale(0%);
+  }
+  .img-planete".$i."{
+    filter: grayscale(0%);
+  }</style>";
+  };
+
+
 
 
   };
@@ -41,14 +64,7 @@ for ($i=0; $i < 5; $i++) {
 
 
 
-
  ?>
-
-
-
-
-
-
 
 @else
 
@@ -58,17 +74,21 @@ for ($i=0; $i < 5; $i++) {
       <a href="/game/{{$p->id}}"><img src="{{$p->planete}}" alt="planete{{$p->id}}"></a>
       <img class="num-planete" src="{{$p->numImg}}" alt="numero{{$p->id}}">
       <div class="story-text{{$p->id}}">
-
+          Connectez-vous pour profiter du mode histoire !
       </div>
     </div>
 @endforeach
+
+  <style media="screen">
+  .num-planete{
+    filter: grayscale(0%);
+  }
+
+  .planete6 {
+    display: none;
+  }
+  </style>
 @endif
-
-
-  <img src="/img/game/trait.svg" alt="">
-
-
-
 
   </div>
 
@@ -82,10 +102,10 @@ for ($i=0; $i < 5; $i++) {
   body {
     background-image: url('/img/game/fond_game.svg');
     background-position: left;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
-
+    overflow-y: hidden;
+    height: 100vh;
 
   }
 
@@ -109,6 +129,6 @@ for ($i=0; $i < 5; $i++) {
   addEventListener("load", function(){
   document.body.addEventListener("wheel", function(e){
   e.preventDefault();
-  document.body.scrollLeft+=e.deltaY<0 ? -600 : 600
+  document.body.scrollLeft+=e.deltaY<0 ? -400 : 400
   }, false);}, false);
 </script>

@@ -16,20 +16,20 @@ class DatabaseSeeder extends Seeder
     {
       DB::table('diy')->insert([
           'name' => 'Fusée spatiale',
-          'url' => '/img/diy/fusée_spa.svg',
+          'url' => '/img/diy/fusee.png',
 
       ]);
 
       DB::table('diy')->insert([
           'name' => 'Système solaire',
-          'url' => '/img/diy/solaire_diy.svg',
+          'url' => '/img/diy/solaire.png',
 
 
       ]);
 
       DB::table('diy')->insert([
           'name' => 'Lampe torche astrale',
-          'url' => '/img/diy/torche_diy.svg',
+          'url' => '/img/diy/lampe.png',
 
 
       ]);
@@ -64,22 +64,23 @@ class DatabaseSeeder extends Seeder
 
       ]);
       DB::table('planetes')->insert([
-          'planete' => '/img/game/num3.svg',
-          'numImg' => '',
+          'planete' => '/img/game/telescope.svg',
+          'numImg' => '/img/game/num3.svg',
+
           'storyText' => 'testetteete',
 
 
       ]);
       DB::table('planetes')->insert([
           'planete' => '/img/game/saturne.svg',
-          'numImg' => '/img/game/num3_2.svg',
+          'numImg' => '/img/game/num4.svg',
           'storyText' => 'testetteete',
 
 
       ]);
       DB::table('planetes')->insert([
           'planete' => '/img/game/terre2.svg',
-          'numImg' => '/img/game/num4.svg',
+          'numImg' => '/img/game/num5.svg',
           'storyText' => 'testetteete',
 
 
@@ -87,7 +88,7 @@ class DatabaseSeeder extends Seeder
 
       DB::table('planetes')->insert([
           'planete' => '/img/game/win.svg',
-          'numImg' => '/img/game/num5.svg',
+          'numImg' => '/img/game/num6.svg',
           'storyText' => 'testetteete',
 
 

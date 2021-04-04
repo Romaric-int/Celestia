@@ -4,26 +4,23 @@
 
 @section('content')
 
-<section class="intro">
-  <img src="../img/illustration/laika-1.svg" alt="laika"  height="950">
-  <div class="intro-txt">
-    <h1>Bienvenue à toi petit astronaute !</h1>
-    <h3  id="test">Prêt pour l'aventure?</h3>
-    <a href="#index-presentation" class="btn-w"id="targetIndex">C'est par ici</a>
-  </div>
-</section>
 
 <section class="index-presentation" id="index-presentation">
-  <img src="../img/illustration/laika-1.svg" alt="laika"  width="1500" height="950">
+  <div class="intro-txt2">
+    <h1>Bienvenue à toi petit astronaute !</h1>
+    <h3  id="test">Prêt pour l'aventure?</h3>
+    <a href="#index-presentation" class="btn-w" id="targetIndex">C'est par ici</a>
+  </div>
+  <img src="../img/illustration/laika-1.svg" class="blur" alt="laika"  width="1500" height="950">
 
-  <svg id="index-bulle" xmlns="http://www.w3.org/2000/svg" width="883.755" height="640.372" viewBox="0 0 883.755 640.372">
+  <svg id="index-bulle" class="blur" xmlns="http://www.w3.org/2000/svg" width="883.755" height="640.372" viewBox="0 0 883.755 640.372">
   <g id="Groupe_60" data-name="Groupe 60" transform="translate(-153.496 -172.983)">
     <path id="Tracé_255" data-name="Tracé 255" d="M1001.75,470.856C1120.143,665.34,918.5,815.633,748.086,813.326c-125.049-1.691-252.058,5.35-376.307-12.222-148.586-21.008-222.487-100.812-218.1-252.85,3.436-119.522,61.118-264.833,171.6-326.866,119.837-67.267,255.348-59.25,377.43-7.694,43,14.151,80.073,38.849,80.073,38.849a596.982,596.982,0,0,1,75.484,55.576C916,355.177,965.523,411.23,1001.75,470.856Z" transform="translate(0 0)" fill="#dacde5"/>
     <path id="Tracé_256" data-name="Tracé 256" d="M238.8,219.541c36.6-22.341,102.168-50.079,187.991-35.506,0,0-59.736,64.458-79.07,141.671" transform="translate(570.378 75.416)" fill="#dacde5"/>
   </g>
-  <p id="pre-1">Salut à toi jeune habitant de la terre ! Bienvenue sur <strong>Celestia</strong> !</p>
-  <p id="pre-2"><strong>Celestia</strong> est un site internet qui te propose de découvrir l’espace afin de devenir un véritable petit astronaute. </p>
-  <p id="pre-3">Ici tu découvriras l’univers de l’espace grâce à un <strong>jeu vidéo</strong>, des <strong>quizz</strong>, et même des <strong>ateliers manuels</strong> !
+  <p id="pre-1" class="blur">Salut à toi jeune habitant de la terre ! Bienvenue sur <strong>Celestia</strong> !</p>
+  <p id="pre-2" class="blur"><strong>Celestia</strong> est un site internet qui te propose de découvrir l’espace afin de devenir un véritable petit astronaute. </p>
+  <p id="pre-3" class="blur">Ici tu découvriras l’univers de l’espace grâce à un <strong>jeu vidéo</strong>, des <strong>quizz</strong>, et même des <strong>ateliers manuels</strong> !
     Une véritable excursion à travers l’espace s’offre à toi.</p>
   </svg>
 
@@ -39,7 +36,7 @@
       <h1>QUI EST NOTRE
     MASCOTTE LAIKA ?</h1>
       <img id="laika_debout" data-aos="fade-down"
-     data-aos-anchor-placement="center-bottom" src="/img/laika/debout.png" width="292" alt="">
+     data-aos-anchor-placement="center-bottom" src="/img/laika/tete_sourire.png" width="292" alt="">
       <h1 id="h1laika2">LAIKA est le premier être vivant envoyé dans l’espace,
     en 1957 !
       </h1>
@@ -74,7 +71,7 @@
       <a id="btn-jouer-i"class="btn-w" href="game">JOUER</a>
 
     </div>
-      <img data-aos="fade-left" data-aos-duration="1000"data-aos-delay="300"  data-aos-offset="0" src="/img/illustration/game.png" alt="">
+      <img class="img-menu1" data-aos="fade-left" data-aos-duration="1000"data-aos-delay="300"  data-aos-offset="0" src="/img/illustration/game.png" alt="">
   </div>
 
 
@@ -85,7 +82,7 @@
       <a id="btn-creer-i" class="btn-w" href="/creer">CREER</a>
 
     </div>
-    <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300"  data-aos-offset="0"src="/img/illustration/DIY.png" alt="">
+    <img class="img-menu2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300"  data-aos-offset="0"src="/img/illustration/DIY.png" alt="">
 
 
   </div>
@@ -104,9 +101,6 @@
 
   </div>
 
-  <div class="color-i">
-
-  </div>
 
 
   <div class="formulaire">
@@ -170,7 +164,7 @@
       display: none !important;
     }
   body {
-    overflow-y: auto;
+    overflow-y: hidden;
   }
   .formulaire {
     position: relative !important;
@@ -179,9 +173,3 @@
   }
 
 </style>
-<script type="text/javascript">
-  $("#targetIndex").on('click',function() {
-
-    alert("oui");
-  });
-</script>

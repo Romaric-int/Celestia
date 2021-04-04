@@ -19,6 +19,8 @@
   Pour notre projet universitaire, nous avons
   donc décidé de combiner passion et utile:
   <strong>enseigner l’astronomie aux enfants.</strong></p>
+
+  <img class="ilu_contact"src="/img/contact-nous/contact.svg" width="50%"alt="">
 </div>
 
 <div class="intro-us">
@@ -27,7 +29,7 @@
     <h3>Romaric</h3>
   </div>
   <div class="creator">
-    <img src="../img/contact-nous/louis.png" alt="icone" width="70" height="70">
+    <img src="../img/contact-nous/leo.png" alt="icone" width="70" height="70">
     <h3>Leo</h3>
   </div>
   <div class="creator">
@@ -106,6 +108,16 @@
 
   .trait{
     left: -0%;
+    position: relative;
+  }
+
+  .introduction h2{
+    text-align: right;
+    position: relative;
+  }
+
+  .introduction h2{
+    text-align: right;
     position: relative;
   }
 
