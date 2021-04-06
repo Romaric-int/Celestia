@@ -124,7 +124,8 @@
   .footer {
 
     position: relative;
-    top: 140%;
+    margin-top: -13rem;
+
   }
 
 </style>

@@ -32,6 +32,10 @@
 @endsection
 
 <style media="screen">
+
+.footer {
+  display: none !important;
+}
   body {
     background-image: url('/img/video/fond_video.svg');
     overflow: hidden;

@@ -27,5 +27,6 @@ Route::get('/creer/{id}', [FirstController::class, 'diy']);
 Route::get('/profil/{id}', [FirstController::class, 'profil']);
 Route::get('/game/{id}', [FirstController::class, 'video'])->where('id','[0-9]+');
 Route::get('/next-step', [FirstController::class, 'nextStep']);
+Route::get('/nextStory', [FirstController::class, 'nextStory']);
 
 Auth::routes();

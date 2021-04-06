@@ -13,9 +13,44 @@
       <a href="/game/{{$p->id}}"><img src="{{$p->planete}}" class="img-planete img-planete{{$p->id}}"alt="planete{{$p->id}}"></a>
       <img class="num-planete num-planete{{$p->id}}" src="{{$p->numImg}}" alt="numero{{$p->id}}">
       <div class="story-text story-text{{$p->id}}">
-        <p class="text-laika text-laika{{$p->id}}">{{$p->storyText}}</p>
+        <p class="text-laika text-laika{{$p->id}}"></p>
       </div>
     </div>
+
+
+@endforeach
+
+<!--quizz -->
+@for ($i = 1; $i < count($planete); $i++)
+  @if(Auth::user()->step_story == $i && Auth::user()->step_vid != $i)
+    <div class="quizz quizz{{$i}}">
+      <a class="btn btn_diy btn_quizz" href="/nextStory">Je continue l'aventure</a>
+    </div>
+
+    <style> .storyText {
+      display: none;
+      }
+      .planete{
+        filter: blur(0.5rem);
+      }
+
+
+
+    </style>
+  @endif
+@endfor
+
+
+<!-- -->
+
+@foreach ($planete as $p)
+
+@if(Auth::user()->step_vid == $p->id)
+  <p class="storyText">{{$p->storyText}}</p>
+@elseif(Auth::user()->step_vid == 0)
+  <p class="storyText"> Intro </p>
+@endif
+
 @endforeach
 
 <?php
@@ -44,7 +79,7 @@ for ($i=0; $i < 5; $i++) {
     ";
     $step = Auth::user()->step_vid;
 
-    for ($i=1; $i < $step+1; $i++) {
+    for ($i=1; $i < $step+2; $i++) {
     echo "<style  media='screen'>
     .num-planete".$i." {
 
@@ -74,10 +109,12 @@ for ($i=0; $i < 5; $i++) {
       <a href="/game/{{$p->id}}"><img src="{{$p->planete}}" alt="planete{{$p->id}}"></a>
       <img class="num-planete" src="{{$p->numImg}}" alt="numero{{$p->id}}">
       <div class="story-text{{$p->id}}">
-          Connectez-vous pour profiter du mode histoire !
+
       </div>
     </div>
 @endforeach
+
+  <p class="storyText">Connectez-vous profiter du mode histoire !</p>
 
   <style media="screen">
   .num-planete{
@@ -122,6 +159,10 @@ for ($i=0; $i < 5; $i++) {
   .logo-header {
     margin-right: 200px;
     margin-left: 100px;
+  }
+
+  .footer{
+    display: none !important;
   }
 </style>
 

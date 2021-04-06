@@ -1,6 +1,8 @@
 @extends('templates.template')
 
-
+<title>Celestia - Jouer, créer, explorer | Un espace pour les enfants</title>
+<meta name="description" content="Vous aimez l'astronomie et souhaitez découvrir les bases de l'astronomie ? Celestia est fait pour toi ! Ici, tu pourras jouer, créer et explorer notre univers.">
+<meta name="robots" content="index,follow">
 
 @section('content')
 
@@ -13,16 +15,17 @@
   </div>
   <img src="../img/illustration/laika-1.svg" class="blur" alt="laika"  width="1500" height="950">
 
-  <svg id="index-bulle" class="blur" xmlns="http://www.w3.org/2000/svg" width="883.755" height="640.372" viewBox="0 0 883.755 640.372">
-  <g id="Groupe_60" data-name="Groupe 60" transform="translate(-153.496 -172.983)">
-    <path id="Tracé_255" data-name="Tracé 255" d="M1001.75,470.856C1120.143,665.34,918.5,815.633,748.086,813.326c-125.049-1.691-252.058,5.35-376.307-12.222-148.586-21.008-222.487-100.812-218.1-252.85,3.436-119.522,61.118-264.833,171.6-326.866,119.837-67.267,255.348-59.25,377.43-7.694,43,14.151,80.073,38.849,80.073,38.849a596.982,596.982,0,0,1,75.484,55.576C916,355.177,965.523,411.23,1001.75,470.856Z" transform="translate(0 0)" fill="#dacde5"/>
-    <path id="Tracé_256" data-name="Tracé 256" d="M238.8,219.541c36.6-22.341,102.168-50.079,187.991-35.506,0,0-59.736,64.458-79.07,141.671" transform="translate(570.378 75.416)" fill="#dacde5"/>
-  </g>
-  <p id="pre-1" class="blur">Salut à toi jeune habitant de la terre ! Bienvenue sur <strong>Celestia</strong> !</p>
-  <p id="pre-2" class="blur"><strong>Celestia</strong> est un site internet qui te propose de découvrir l’espace afin de devenir un véritable petit astronaute. </p>
-  <p id="pre-3" class="blur">Ici tu découvriras l’univers de l’espace grâce à un <strong>jeu vidéo</strong>, des <strong>quizz</strong>, et même des <strong>ateliers manuels</strong> !
-    Une véritable excursion à travers l’espace s’offre à toi.</p>
-  </svg>
+  <div class="txt_intro">
+
+
+    <p id="pre-1" class="blur">Salut à toi jeune habitant de la terre ! Bienvenue sur <strong>Celestia</strong> !</p>
+    <p id="pre-2" class="blur"><strong>Celestia</strong> est un site internet qui te propose de découvrir l’espace afin de devenir un véritable petit astronaute. </p>
+    <p id="pre-3" class="blur">Ici tu découvriras l’univers de l’espace grâce à un <strong>jeu vidéo</strong>, des <strong>quizz</strong>, et même des <strong>ateliers manuels</strong> !
+      Une véritable excursion à travers l’espace s’offre à toi.</p>
+    <a href="#laika_debout" class="blur blur_btn btn_connec" id="startIndex">C'est parti !</a>
+
+
+  </div>
 
 
 
@@ -133,7 +136,7 @@
         </div>
         <div class="input-form e-mail">
           <label for="email">EMAIL*</label>
-          <input class="" type="text" name="email" value="">
+          <input class="" type="email" name="email" value="">
         </div>
 
 

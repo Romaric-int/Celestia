@@ -1,4 +1,6 @@
+<head>
 <script type="text/javascript" src="/js/jquery.js"></script>
+
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/main.css') }}">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -6,11 +8,14 @@
 <script src="/js/jquery.js"></script>
 
 
+  
+</head>
+
 
 <section class="main-header">
   <div class="logo-header">
 
-    <img src="/img/logo/logo_txt.png" alt="logo Celestia" width="200" >
+    <a href="/"><img src="/img/logo/logo_txt.png" alt="logo Celestia" width="200" ></a>
 
   </div>
 
@@ -92,6 +97,23 @@
           @yield('content')
 
         </main>
+
+<section class="footer">
+  <h1>&copy; Tout droits réservé au groupe Celestia</h1>
+  <div class="reseaux sociaux">
+    <h1>Nos réseaux</h1>
+    <div class="link_res">
+
+
+      <a href="https://www.instagram.com/celestia_lejeu/?hl=fr"><img src="/img/réseaux/insta.png" alt="instagram"> </a>
+      <a href="https://www.facebook.com/Celestia-106968368153509"> <img src="/img/réseaux/fb.png" alt="facebook"> </a>
+    </div>
+  </div>
+  <div class="ressource">
+    <h1>Illustrations</h1>
+    <a href="https://fr.freepik.com/">Freepik</a>
+  </div>
+</section>
 
 
 

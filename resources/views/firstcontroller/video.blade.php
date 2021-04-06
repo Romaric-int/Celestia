@@ -9,7 +9,7 @@
 
 
 @if(Auth::check())
-  @if(Auth::user()->step_vid == $video->id)
+  @if(Auth::user()->step_story >= $video->id)
   <a class="btn btn_diy" href="/game">J'ai compris, je continue l'aventure !</a>
 
   @else
@@ -35,5 +35,5 @@
 
     margin-bottom: 4rem;
   }
-  
+
 </style>

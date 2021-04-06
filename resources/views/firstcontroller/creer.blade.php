@@ -32,7 +32,7 @@
 </section>
 
 <section class="les_diy">
-  
+
   @foreach($diy as $p)
   <div class="solo_diy">
 
@@ -73,7 +73,7 @@
       <a id="btn-jouer-i"class="btn-w" href="game">JOUER</a>
 
     </div>
-      <img data-aos="fade-left" data-aos-duration="1000"data-aos-delay="300"  data-aos-offset="0" src="/img/illustration/bulle1-i.svg" alt="">
+      <img data-aos="fade-left" data-aos-duration="1000"data-aos-delay="300"  data-aos-offset="0" src="/img/illustration/game.png" alt="">
   </div>
   <div class="">
 

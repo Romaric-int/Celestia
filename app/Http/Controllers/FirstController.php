@@ -7,6 +7,7 @@ use App\Models\Video;
 use App\Models\User;
 use App\Models\Planete;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class FirstController extends Controller
 {
@@ -18,7 +19,7 @@ class FirstController extends Controller
     public function game(){
 
       $planete = Planete::all();
-      
+
       return view("firstcontroller.game", ["planete" => $planete]);
     }
 
@@ -68,8 +69,12 @@ class FirstController extends Controller
 
     public function profil($id){
       $profil = User::findOrFail($id);
+      $nowdate = Carbon::now();
+      $startdate = Auth::user()->created_at;
       $data = User::all();
-      return view("firstcontroller.profil", ["data" => $data]);
+      $date = $startdate->diffInDays($nowdate);
+      
+      return view("firstcontroller.profil", ["data" => $data], ["date" => $date]);
     }
 
     public function video($id){
@@ -80,6 +85,14 @@ class FirstController extends Controller
     }
 
     public function nextStep(){
+      $id = Auth::id();
+      $update = User::where('id', $id);
+      $update->increment('step_story');
+
+      return redirect('/game');
+    }
+
+    public function nextStory(){
       $id = Auth::id();
       $update = User::where('id', $id);
       $update->increment('step_vid');

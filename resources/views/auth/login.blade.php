@@ -1,20 +1,23 @@
-@extends('layouts.app')
+@extends('templates.template')
+
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+
+
+<div class="container_connexion">
+
+
+                <div class="titre_log">{{ __('Connexion') }}</div>
+
+                <div >
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Mail</label>
+                        <div >
+                            <label for="email">Mail</label>
 
-                            <div class="col-md-6">
+                            <div>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -45,29 +48,49 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('Se souvenir de moi') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+
+                            <div class="btn_connec_forget offset-md-4">
+                                <button type="submit" class="btn btn-primary btn_connec">
+                                    {{ __('Connexion') }}
+                                </button><br>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                    <a class="mdp_forget" href="{{ route('password.request') }}">
+                                        {{ __('Mot de passe oublié?') }}
                                     </a>
                                 @endif
                             </div>
-                        </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="register">
+
+
+<p>Vous voulez vous créer un compte ?</p>
+<a class="btn_crea" href="{{ route('register') }}">{{ __("Création d'un compte") }}</a>
+
+</div>
 @endsection
+
+<style media="screen">
+  body {
+    background-color: #303156;
+    color: white;
+    background-image: url('/img/profil/fondconnexion.svg');
+    background-position: right;
+  }
+
+  .footer {
+    display: none !important;
+  }
+</style>

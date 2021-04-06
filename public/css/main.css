@@ -10,6 +10,69 @@ body {
 
 }
 
+
+.footer {
+  background-color: #A790C0;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer img {
+  width: 10%;
+  filter: grayscale(100%);
+}
+.footer img:hover {
+  width: 10%;
+  filter: grayscale(0%);
+  transition-duration: 0.23s;
+}
+
+.footer h1::after{
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 1px;
+  height: 6rem;
+  right: 50%;
+  left: 45%;
+
+
+}
+
+.reseaux h1 {
+  margin-bottom: 1rem;
+}
+
+.footer .ressource a{
+  color: white;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.footer .reseaux::after{
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 1px;
+  height: 9rem;
+
+  left:75%;
+
+
+
+}
+
 .cont-bandes {
     width: 100%;
     height: 100%;
@@ -218,6 +281,8 @@ left: 60%;
 
 
 }
+
+
 .creator{
   display: flex;
   flex-direction: column;
@@ -270,6 +335,17 @@ input[type=text] {
   border-radius: 20px;
   margin: 0;
   height: 30px;
+  color: white;
+}
+
+
+input[type=email] {
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 20px;
+  margin: 0;
+  height: 30px;
+  color: white;
 }
 input[type=button] {
   background-color: white;
@@ -406,6 +482,7 @@ input[type=button]:hover {
   opacity: 1;
   transition-duration: 0.5s;
   opacity: 0.3;
+  text-align: left;
 
 }
 
@@ -444,11 +521,29 @@ input[type=button]:hover {
 
 }
 
-.index-presentation p {
-  position: relative;
-  top: -38%;
-  left: -17%;
-  color: #484991;
+.txt_intro {
+  text-align: left;
+  position: absolute;
+  top:12rem;
+  left: 4rem;
+  color: white;
+  max-width: 37%;
+}
+
+.txt_intro p{
+  margin-left: 0;
+}
+
+
+
+.txt_intro  a {
+  position: relative
+
+}
+
+.blur_btn {
+  padding: 0.5rem 2rem 0.5rem 2rem !important;
+  margin-left: 15rem !important;
 }
 
 #pre-1{
@@ -466,6 +561,7 @@ input[type=button]:hover {
   left: -16.5%;
   font-size: 30px;
   max-width: 789px;
+  margin-bottom: 5rem;
 }
 
 /* presenation laika
@@ -976,11 +1072,86 @@ ul  {
 */
 
 .stat_profil {
-  background-image: url(/img/profil/fond_stat.svg);
+
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  color: white;
+  display: flex;
+  z-index: 50;
+  position: relative;
+
+  top: 5%;
+
 }
+
+.stat_profil > img {
+  position: relative;
+  left: -5%;
+
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
+.info_profil{
+  text-align: left;
+}
+
+.illu_stat{
+  position: absolute;
+  right: 7%;
+  top: 20%;
+  width: 30%;
+}
+
+.info_profil{
+  position: relative;
+  left: -7%;
+}
+
+.nom_profil{
+  font-size: 5rem;
+  position: relative;
+
+  color: #F2CCF2;
+}
+
+.date_creat{
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.les_stats {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  margin-right: 20rem;
+  grid-column-gap: 7rem;
+
+}
+
+.num_profil {
+  color: #303156;
+  background-color: #F2CCF2;
+  border-radius: 20px;
+  padding: 3rem 2rem  3rem 2rem;
+}
+
+  .num_profil span  {
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  .aventure span  {
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
 
 /*gamepage
 !!
@@ -1068,12 +1239,16 @@ ul  {
 
 
 
-.text-laika {
+.storyText {
   padding: 2rem 10rem 2rem 10rem;
   border-radius: 55px;
-  visibility: hidden;
+  position: fixed;
+  bottom: 5rem;
+  left: 30%;
   background-color: #D5C1ED;
   margin-top: 12rem;
+  color: black;
+  font-size: 1.3rem;
 
 }
 
@@ -1103,4 +1278,223 @@ ul  {
 
 .page-video a  {
   color:
+}
+
+.quizz{
+  position: fixed;
+  width: 70rem;
+  height: 40rem;
+  background-color: #B69BC7;
+  border-radius: 30px;
+  left: 20%;
+  top:20%;
+  z-index: 80;
+
+}
+
+.btn_quizz{
+  position: relative;
+  top: 35rem;
+  left: 40%;
+  z-index: 90;
+}
+
+/* connexion */
+
+.container_connexion form{
+  padding-top: 1rem;
+  background-color: #A793B2;
+  max-width: 40%;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.container_connexion form input{
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  border: solid 1px white;
+  margin-top: 0.5rem;
+
+
+}
+
+.container_connexion form input[type=email]{
+
+  background: transparent !important;
+
+}
+
+.container_connexion form label{
+  font-size: 1.25rem;
+
+
+}
+
+.mdp_forget {
+  margin-top: 1rem;
+  color: white;
+  position: relative;
+  top: 20%;
+}
+
+.btn_connec_forget{
+  position: relative;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.btn_connec {
+  background-color: #47488C;
+  border: none;
+  color: white;
+  font-size: 1.20rem;
+  border-radius: 20px;
+  padding: 0.2rem 1rem 0.2rem  1rem;
+  font-weight: bold;
+}
+
+.btn_connec:hover {
+  background-color: #DEC6EB;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 1.20rem;
+  border-radius: 20px;
+  padding: 0.2rem 1rem 0.2rem  1rem;
+}
+
+.titre_log {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 20rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.register {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.register p {
+
+  margin-bottom: 1rem;
+}
+
+.btn_crea {
+
+  color: #47488C;
+  background-color: #DEC6EB;
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+}
+
+.btn_crea:hover {
+
+  color: #DEC6EB;
+  background-color: #47488C;
+  border-radius: 20px;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+  transition-duration: 0.3s;
+
+}
+
+
+#select{
+  width: 300px;
+  height: 300px;
+  font-size: 0;
+  border: none;
+
+}
+
+#select option {
+  font-size: 16px;
+}
+
+.flex-form form{
+  display: flex;
+  max-width: 60%;
+}
+
+.form_inscri{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+   grid-auto-rows: 5rem;
+   margin-top: 4rem;
+}
+
+.btn_validate{
+  position:absolute;
+  top: 80%;
+  left: 40%;
+
+}
+
+.info_form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.info_form label{
+  text-align: left;
+}
+
+.flex-form form {
+  background-color: #A793B2;
+  border-radius: 30px;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  padding-bottom: 4rem;
+
+}
+
+.avatar_chose {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar_chose label{
+  margin-bottom: 1rem;
+}
+
+.flex-form .form_email{
+  grid-column: 1 / 3;
+  margin: 0;
+}
+
+.flex-form .form_email #email{
+  width: 100%;
+}
+
+input[type=password]{
+  border: 2px solid white;
+    background: transparent;
+    border-radius: 20px;
+    margin: 0;
+    height: 30px;
+    color: white;
+}
+
+.btn_validate_push {
+
+  font-size: 1.20rem;
+}
+
+.form_inscri label {
+  margin-left: 0;
+  margin-bottom: 0.2rem;
+}
+
+.titre_crea {
+  max-width: 60%;
+  text-align: left;
+  margin-left: 20%;
+
 }
