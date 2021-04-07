@@ -132,5 +132,9 @@
   .footer {
     display: none !important;
   }
+
+  .register {
+    margin-bottom:5rem !important;
+  }
 </style>
 @endsection

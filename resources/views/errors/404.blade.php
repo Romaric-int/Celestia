@@ -17,7 +17,7 @@
     <div class="page-404">
       <img src="/img/404/404.svg" alt="">
       <p>🐶 Woofpsie… Tu t’es perdu dans l’espace…</p>
-      <p>La page que tu recherches n’existe pas.</p>
+      <p style="font-family:'Montserrat'; font-size:1.5rem;">La page que tu recherches n’existe pas.</p>
       <div class="lien_404">
         <a class="btn_404 accueil" href="/">Accueil</a>
         <a class="btn_404  prec" href="{{url()->previous()}}">Page précédente</a>

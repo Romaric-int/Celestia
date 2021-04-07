@@ -8,14 +8,14 @@
 <script src="/js/jquery.js"></script>
 
 
-  
+
 </head>
 
 
 <section class="main-header">
   <div class="logo-header">
 
-    <a href="/"><img src="/img/logo/logo_txt.png" alt="logo Celestia" width="200" ></a>
+    <a href="/"><img src="/img/logo/logo2.svg" alt="logo Celestia" width="200" ></a>
 
   </div>
 

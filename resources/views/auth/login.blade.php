@@ -69,17 +69,18 @@
 
                     </form>
                 </div>
+                <div class="register">
+
+
+                <p>Vous voulez vous créer un compte ?</p>
+                <a class="btn_crea btn_crea_connec" href="{{ route('register') }}">{{ __("Création d'un compte") }}</a>
+
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-<div class="register">
 
 
-<p>Vous voulez vous créer un compte ?</p>
-<a class="btn_crea" href="{{ route('register') }}">{{ __("Création d'un compte") }}</a>
 
-</div>
+
 @endsection
 
 <style media="screen">
@@ -93,4 +94,6 @@
   .footer {
     display: none !important;
   }
+
+
 </style>

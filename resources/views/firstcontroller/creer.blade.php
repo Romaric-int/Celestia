@@ -75,9 +75,7 @@
     </div>
       <img data-aos="fade-left" data-aos-duration="1000"data-aos-delay="300"  data-aos-offset="0" src="/img/illustration/game.png" alt="">
   </div>
-  <div class="">
 
-  </div>
 
 </section>
 
@@ -92,6 +90,13 @@
 
 body {
   background-color: #303156 !important;
+}
+
+.i-menu h1 {
+    color: white !important;
+}
+.i-menu p {
+    color: white !important;
 }
 
 </style>
