@@ -1675,3 +1675,78 @@ input[type=password]{
   position: relative;
   top: -2rem;
 }
+
+.quizz {
+  display: flex;
+  flex-direction: column;
+  }
+
+.choices {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+}
+
+.quizz > h1 {
+  color: white;
+  margin-left: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Fredoka One";
+  font-weight: lighter;
+  font-size: 3rem;
+
+}
+
+.quizz > h2 {
+  color: white;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-family: "Fredoka One";
+  font-weight: lighter;
+  background-color: #303156;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+}
+
+.quizz > h2 > span{
+  color: white;
+
+
+  font-size: 2rem;
+  border-radius: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-family: "Fredoka One";
+  font-weight: lighter;
+
+}
+
+#revoir_video {
+  margin-bottom: 2.5rem;
+  background-color: #F0EAF4;
+  padding: 0.2rem  1rem 0.2rem 1rem;
+  border-radius: 20px;
+  color: #303156;
+  font-weight: bold;
+}
+
+.choices > button {
+  background-color: #F0EAF4;
+  padding: 4rem 3rem 4rem 3rem;
+  border-radius: 20px;
+  color: #303156;
+  font-weight: bold;
+  border: none;
+  margin-right: 40px;
+  transition-duration: 0.4s}
+
+.choices > button:hover {
+  transform: translateY(-5px);
+  border: solid 6px #303156;
+  cursor: pointer;
+}

@@ -23,9 +23,34 @@
 <!--quizz -->
 @for ($i = 1; $i < count($planete); $i++)
   @if(Auth::user()->step_story == $i && Auth::user()->step_vid != $i)
-    <div class="quizz quizz{{$i}}">
-      <a class="btn btn_diy btn_quizz" href="/nextStory">Je continue l'aventure</a>
+    <div class="quizz quizz{{$i}}"  id="quiz{{$i}}">
+      <h1>Quizz {{$i}}</h1>
+      <h2><img src="/img/laika/tete_contente.png" width="70px" alt=""><span id="question{{$i}}"></span></h2>
+      <h3 id="score{{$i}}"></h3>
+      <a href="/game/{{$i}}" id="revoir_video">Revoir la vidéo</a>
+
+      <div class="choices">
+        <button id="guess{{$i}}0" class="btn_choice">
+          <p id="choice{{$i}}0"></p>
+        </button>
+
+        <button id="guess{{$i}}1" class="btn_choice">
+          <p id="choice{{$i}}1"></p>
+        </button>
+
+        <button id="guess{{$i}}2" class="btn_choice">
+          <p id="choice{{$i}}2"></p>
+        </button>
+
+        <button id="guess{{$i}}3" class="btn_choice">
+          <p id="choice{{$i}}3"></p>
+        </button>
+      </div>
+
+
     </div>
+
+    <script src="/js/quiz.js"></script>
 
     <style> .storyText {
       display: none;
@@ -165,6 +190,8 @@ for ($i=0; $i < 5; $i++) {
     display: none !important;
   }
 </style>
+
+
 
 <script type="text/javascript">
   addEventListener("load", function(){
