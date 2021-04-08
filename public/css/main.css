@@ -1221,6 +1221,25 @@ ul  {
 
 }
 
+.diego_help{
+  position: relative;
+  max-width: 13rem;
+  left: 1545px;
+  top: 20.2%;
+}
+
+.diego_help  img {
+  width: 100%;
+
+}
+.diego_help h1{
+  color: white;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
 .planete:nth-child(5){
   position: relative;
   top: -0.5rem;
@@ -1739,14 +1758,17 @@ input[type=password]{
   background-color: #F0EAF4;
   padding: 4rem 3rem 4rem 3rem;
   border-radius: 20px;
+  height: 100%;
   color: #303156;
   font-weight: bold;
-  border: none;
+  width: 20%;
   margin-right: 40px;
-  transition-duration: 0.4s}
+  transition-duration: 0.2s;
+  border: solid 6px transparent;}
 
 .choices > button:hover {
-  transform: translateY(-5px);
+
   border: solid 6px #303156;
   cursor: pointer;
+  height: 100%;
 }

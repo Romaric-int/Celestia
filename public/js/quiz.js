@@ -22,8 +22,6 @@ new Question("Qui est le premier homme à être allé dans l’espace ?",
 ["Youri Alexeïevitch Gagarine","Buzz Aldrin", "Neil Armstrong", "Titeuf"], "Youri Alexeïevitch Gagarine")
 ];
 
-
-
 let questions2 = [
 new Question("Sur la lune, la pesanteur ...",
 ["est la même que sur la Terre", "est 6 fois plus faible que sur la Terre", "n'existe pas", "est la même que le soleil"], "6 fois plus faible que sur la Terre."),
@@ -77,6 +75,7 @@ class Quiz {
   hasWin(){
     return this.score >= this.questions.length;
   }
+
 }
 
 
@@ -84,53 +83,74 @@ class Quiz {
 
 
 
-const display = {
-  elementShown: function(id, text) {
-    let element = document.getElementById(id);
-    element.innerHTML = text;
-  },
-  endQuiz: function() {
-    endQuizHTML = `
-      <h1>Quiz terminé !</h1>
-      <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
-      <p>Tu n'as pas réussi le quizz tu peux le recommencer ou  revoir la vidéo</p>
-      <a href="/game/1" id="revoir_video">Revoir la vidéo</a>
-      <a href="/game" class='restart'>Recommencer</a>`;
-    this.elementShown("quiz1", endQuizHTML);
-  },
-  win: function() {
-    endQuizHTML = `
-      <h1>Quiz terminé !</h1>
-      <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
-      <p>Tu as réussi le quizz tu peux le recommencer ou continuer</p>
-      <a href="/nextStory" id="revoir_video">Continuer</a>
-      <a href="/game" class='restart'" class='restart'>Recommencer</a>`;
-    this.elementShown("quiz1", endQuizHTML);
-  },
-  question: function() {
-    this.elementShown("question1", quiz.getCurrentQuestion().text);
-  },
-  choices: function() {
-    let choices = quiz.getCurrentQuestion().choices;
+  const display = {
+    elementShownId: function(id, text) {
+      let element = document.getElementById(id);
+      element.innerHTML = text;
+    },
+    elementShownClass: function(id, classname, text) {
+      let element2 = document.getElementById(id).getElementsByClassName(classname)[0];
+      element2.innerHTML = text;
+    },
+    endQuiz: function() {
+      endQuizHTML = `
+        <h1>Quiz terminé !</h1>
+        <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
+        <p>Tu n'as pas réussi le quizz tu peux le recommencer ou  revoir la vidéo</p>
+        <a href="/game/1" id="revoir_video">Revoir la vidéo</a>
+        <a href="/game/quizz/1" class='restart'>Recommencer</a>`;
+      this.elementShownId("quiz", endQuizHTML);
+    },
 
-    guessHandler = (id, guess) => {
-      document.getElementById(id).onclick = function() {
-        quiz.guess(guess);
-        quizApp();
+
+
+    win: function() {
+      endQuizHTML = `
+        <h1>Quiz terminé !</h1>
+        <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
+        <p>Tu as réussi le quizz tu peux le recommencer ou continuer</p>
+        <a href="/nextStory" id="revoir_video">Continuer</a>
+        <a href="/game" class='restart'" class='restart'>Recommencer</a>`;
+      this.elementShownId("quiz", endQuizHTML);
+    },
+
+
+
+    question: function() {
+      this.elementShownId("question", quiz.getCurrentQuestion().text);
+    },
+
+
+
+
+
+    choices: function() {
+      let choices = quiz.getCurrentQuestion().choices;
+
+      guessHandler = (id, classname ,guess) => {
+        document.getElementById(id).getElementsByClassName(classname)[0].onclick = function() {
+          quiz.guess(guess);
+          quizApp();
+        }
       }
-    }
-    // display choices and handle guess
-    for(let i = 0; i < choices.length; i++) {
-      this.elementShown("choice1" + i, choices[i]);
-      guessHandler("guess1" + i, choices[i]);
-    }
-  },
+      // display choices and handle guess
+      for(let i = 0; i < choices.length; i++) {
+
+        this.elementShownClass("quiz", "choice" + i, choices[i]);
+        guessHandler("quiz","guess" + i, choices[i]);
+
+      }
+    },
 
 
 
 
 
-};
+  };
+
+
+
+
 
 
 
@@ -150,16 +170,13 @@ quizApp = () => {
     display.choices();
 
   }
-}
-
-quizApp2 = () => {
 
 
 }
+
+
+
 
 
 let quiz = new Quiz(questions);
 quizApp();
-
-let quiz2 = new Quiz(questions2);
-quizApp2();

@@ -73,14 +73,14 @@ class FirstController extends Controller
       $startdate = Auth::user()->created_at;
       $data = User::all();
       $date = $startdate->diffInDays($nowdate);
-      
+
       return view("firstcontroller.profil", ["data" => $data], ["date" => $date]);
     }
 
     public function video($id){
       $video = Video::findOrFail($id);
 
-                    ;
+
       return view("firstcontroller.video", ["video" => $video]);
     }
 
@@ -98,5 +98,12 @@ class FirstController extends Controller
       $update->increment('step_vid');
 
       return redirect('/game');
+    }
+
+    public function quizz($id){
+
+      $planete = Planete::all();
+      return view("firstcontroller.quiz", ["planete" => $planete]);
+
     }
 }

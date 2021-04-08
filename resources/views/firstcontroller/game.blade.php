@@ -8,6 +8,20 @@
 
 
 
+@for ($i=0; $i < count($planete); $i++)
+  @if(Auth::user()->step_story == $i && Auth::user()->step_vid != $i)
+
+  <?php
+  header('Location: /game/quizz/'.$i);
+  exit();
+?>
+
+
+  @endif
+@endfor
+
+
+
 @foreach($planete as $p)
     <div class="planete planete{{$p->id}}">
       <a href="/game/{{$p->id}}"><img src="{{$p->planete}}" class="img-planete img-planete{{$p->id}}"alt="planete{{$p->id}}"></a>
@@ -21,49 +35,7 @@
 @endforeach
 
 <!--quizz -->
-@for ($i = 1; $i < count($planete); $i++)
-  @if(Auth::user()->step_story == $i && Auth::user()->step_vid != $i)
-    <div class="quizz quizz{{$i}}"  id="quiz{{$i}}">
-      <h1>Quizz {{$i}}</h1>
-      <h2><img src="/img/laika/tete_contente.png" width="70px" alt=""><span id="question{{$i}}"></span></h2>
-      <h3 id="score{{$i}}"></h3>
-      <a href="/game/{{$i}}" id="revoir_video">Revoir la vidéo</a>
 
-      <div class="choices">
-        <button id="guess{{$i}}0" class="btn_choice">
-          <p id="choice{{$i}}0"></p>
-        </button>
-
-        <button id="guess{{$i}}1" class="btn_choice">
-          <p id="choice{{$i}}1"></p>
-        </button>
-
-        <button id="guess{{$i}}2" class="btn_choice">
-          <p id="choice{{$i}}2"></p>
-        </button>
-
-        <button id="guess{{$i}}3" class="btn_choice">
-          <p id="choice{{$i}}3"></p>
-        </button>
-      </div>
-
-
-    </div>
-
-    <script src="/js/quiz.js"></script>
-
-    <style> .storyText {
-      display: none;
-      }
-      .planete{
-        filter: blur(0.5rem);
-      }
-
-
-
-    </style>
-  @endif
-@endfor
 
 
 <!-- -->
@@ -154,6 +126,11 @@ for ($i=0; $i < 5; $i++) {
 
   </div>
 
+  <div class="diego_help">
+    <img src="/img/game/diego_help.svg" alt="diego">
+    <h1>A l’aide!!!</h1>
+  </div>
+
 
 @endsection
 
@@ -189,6 +166,8 @@ for ($i=0; $i < 5; $i++) {
   .footer{
     display: none !important;
   }
+
+
 </style>
 
 
