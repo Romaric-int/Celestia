@@ -1,10 +1,11 @@
 <head>
 <script type="text/javascript" src="/js/jquery.js"></script>
 
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/main.css') }}">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -15,7 +16,7 @@
 <section class="main-header">
   <div class="logo-header">
 
-    <a href="/"><img src="/img/logo/logo2.svg" alt="logo Celestia" width="200" ></a>
+    <a href="/"><img src="/img/logo/logo2.svg" alt="logo Celestia" ></a>
 
   </div>
 

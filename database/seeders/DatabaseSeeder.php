@@ -36,14 +36,21 @@ class DatabaseSeeder extends Seeder
 
       DB::table('game')->insert([
           'name' => 'Les Astronautes',
-          'urlVideo' => 'https://www.youtube.com/embed/VhVNXaXJz2w',
+          'urlVideo' => 'https://www.youtube.com/embed/UIMp6wRsOXA',
+
+
+      ]);
+
+      DB::table('game')->insert([
+          'name' => 'La Lune',
+          'urlVideo' => 'https://www.youtube.com/embed/20t5BXhC7Uw',
 
 
       ]);
 
       DB::table('game')->insert([
           'name' => 'Le Système Solaire',
-          'urlVideo' => 'https://www.youtube.com/embed/hfxAzbrnaOU',
+          'urlVideo' => 'https://www.youtube.com/embed/20t5BXhC7Uw',
 
 
       ]);

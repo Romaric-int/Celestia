@@ -6,20 +6,53 @@
 
 @if(Auth::check())
 
+  <div class="diego_help">
+    <img src="/img/game/diego_help.svg" alt="diego">
+    <h1>A l’aide!!!</h1>
+  </div>
+
+@for ($i=1; $i < count($planete); $i++)
 
 
-@for ($i=0; $i < count($planete); $i++)
+
+
+
+
+    <div class="quizz quizz"  id="quiz{{$i}}">
+      <h1>Quizz </h1>
+      <h2><img src="/img/laika/tete_contente.png" width="70px" alt=""><span id="question{{$i}}" ></span></h2>
+      <h3 id="score"></h3>
+      <a href="/game/1" id="revoir_video">Revoir la vidéo</a>
+
+      <div class="choices">
+        @for ($w = 0; $w < 4; $w++)
+        <button  class="btn_choice guess{{$w}}">
+          <p  class="choice{{$w}}"></p>
+        </button>
+        @endfor
+
+      </div>
+
+
+    </div>
+
+
+
   @if(Auth::user()->step_story == $i && Auth::user()->step_vid != $i)
 
-  <?php
-  header('Location: /game/quizz/'.$i);
-  exit();
-?>
+    <style media="screen">
+      #quiz{{$i}} {
+        visibility: visible;
+      }
 
+      .storyText{
+        visibility: hidden;
+      }
+    </style>
 
   @endif
 @endfor
-
+  <script src="/js/quiz.js"></script>
 
 
 @foreach($planete as $p)
@@ -43,7 +76,7 @@
 @foreach ($planete as $p)
 
 @if(Auth::user()->step_vid == $p->id)
-  <p class="storyText">{{$p->storyText}}</p>
+  <div class="storyText"> <img src="/img/laika/tete_contente.png" width='50%'alt=""> <p>{{$p->storyText}}</p></div>
 @elseif(Auth::user()->step_vid == 0)
   <p class="storyText"> Intro </p>
 @endif
@@ -126,10 +159,7 @@ for ($i=0; $i < 5; $i++) {
 
   </div>
 
-  <div class="diego_help">
-    <img src="/img/game/diego_help.svg" alt="diego">
-    <h1>A l’aide!!!</h1>
-  </div>
+
 
 
 @endsection

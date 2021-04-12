@@ -103,6 +103,10 @@ body {
 !
 !*/
 
+
+.logo-header img {
+ margin-top: 1rem;
+}
 .main-header {
   display: flex;
 
@@ -114,7 +118,7 @@ body {
   position: relative;
   left: -4rem;
   top: 0;
-  background-image: url('/img/logo/logo2.svg');
+
 }
 .main-header > nav {
   display: flex;
@@ -587,11 +591,11 @@ input[type=button]:hover {
   padding-top: 10rem;
 }
 .laika-flex >  h1 {
-  font-size: 50px;
+  font-size: 3rem;
   max-width: 430px;
   text-align: center;
   color: #DEC6EB;
-  margin-left: 300px;
+  margin-left: 10%;
 }
 
 #h1laika2 {
@@ -708,7 +712,7 @@ input[type=button]:hover {
 }
 .text-menu3 {
   position: relative;
-  left: 0%;
+  left: 4%;
 }
 .img-menu1{
   position: relative;
@@ -730,10 +734,10 @@ input[type=button]:hover {
   text-align: right;
 }
 #h12-i {
-  margin-left: 100px;
+  text-align: right;
 }
 #btn-jouer-i {
-  margin-left: 200px;
+
   z-index: 10;
   position: relative;
   color: #E7CEF5;
@@ -1224,8 +1228,8 @@ ul  {
 .diego_help{
   position: relative;
   max-width: 13rem;
-  left: 1545px;
-  top: 20.2%;
+  left: 2055px;
+    top: 17rem;
 }
 
 .diego_help  img {
@@ -1271,7 +1275,7 @@ ul  {
 
 
 .storyText {
-  padding: 2rem 10rem 2rem 10rem;
+  padding: 1rem 10rem 1rem 10rem;
   border-radius: 55px;
   position: fixed;
   bottom: 5rem;
@@ -1281,7 +1285,20 @@ ul  {
   color: black;
   font-size: 1.3rem;
   font-weight: bold;
+  max-width: 30rem;
+  display: flex;
+  align-items: center;
 
+
+}
+
+.storyText img{
+  margin-right: 4rem;
+  margin-left: -8rem;
+}
+
+.storyText p{
+  max-width: 50%;
 }
 
 
@@ -1698,6 +1715,7 @@ input[type=password]{
 .quizz {
   display: flex;
   flex-direction: column;
+  visibility: hidden;
   }
 
 .choices {
@@ -1733,7 +1751,7 @@ input[type=password]{
 .quizz > h2 > span{
   color: white;
 
-
+  margin-left: 0;
   font-size: 2rem;
   border-radius: 20px;
   padding-left: 1rem;
@@ -1745,6 +1763,19 @@ input[type=password]{
 
 }
 
+.quizz > h2 > img{
+  margin-right: 0;
+
+}
+
+.revoir_video, .next_quizz {
+
+  background-color: #F0EAF4;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  color: #303156;
+  font-weight: bold;
+}
 #revoir_video {
   margin-bottom: 2.5rem;
   background-color: #F0EAF4;
@@ -1754,21 +1785,300 @@ input[type=password]{
   font-weight: bold;
 }
 
+#revoir_video:hover, .revoir_video:hover, .next_quizz:hover {
+  background-color: #303156;
+  transition-duration: 0.3s;
+  color: #F0EAF4;
+}
+
+.choices{
+  height: 30%;
+}
+
 .choices > button {
-  background-color: #F0EAF4;
-  padding: 4rem 3rem 4rem 3rem;
+
+
   border-radius: 20px;
   height: 100%;
   color: #303156;
   font-weight: bold;
-  width: 20%;
+  width: 50%;
   margin-right: 40px;
   transition-duration: 0.2s;
   border: solid 6px transparent;}
 
+
+.btn_choice > p {
+  background-color: #F0EAF4;
+  width: 12rem;
+
+}
 .choices > button:hover {
 
   border: solid 6px #303156;
   cursor: pointer;
   height: 100%;
 }
+
+.score_quizz {
+  color: white;
+    font-family: 'Fredoka One';
+    font-weight: lighter;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.restart {
+    background-color: #F67BD3;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+
+  .restart:hover {
+      background-color: #A9478D;
+      transition-duration: 0.3s;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px 20px 10px 20px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+
+
+  .p_quizz {
+    color: white;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   font-size: 1.3rem;
+  }
+
+
+
+
+  @media screen and (max-width: 1050px) {
+
+
+    .intro-txt2 > h1 {
+    font-size: 3rem;
+    font-family: "Fredoka One";
+}
+
+
+
+
+    #pre-1 {
+      font-size: 22px;
+
+  }
+  #pre-3 {
+    font-size: 22px;
+
+  }
+  #pre-2 {
+    font-size: 22px;
+
+  }
+
+
+
+  .blur_btn {
+      padding: 0.5rem 2rem 0.5rem 2rem !important;
+      margin-left: 6rem !important;
+  }
+
+  #trait-i {
+    display: none;
+  }
+
+  .img-menu2 {
+      position: relative;
+      right: 0;
+  }
+
+  .menu1 img {
+      margin-left: 0;
+  }
+
+  .i-menu {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      overflow: hidden;
+      z-index: 20;
+      position: relative;
+      margin-top: 6rem;
+  }
+
+  #btn-jouer-i {
+      /* margin-left: 200px; */
+      /* margin-bottom: 1rem; */
+      top: -2rem;
+      z-index: 10;
+      position: relative;
+      color: #E7CEF5;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: #484991;
+      border-radius: 30px;
+      padding: 10 45 10 45;
+      overflow: hidden;
+  }
+
+  #btn-creer-i {
+      margin-left: 400px;
+      z-index: 10;
+      position: relative;
+      top: -2rem;
+      right: 7rem;
+      font-size: 1.2rem;
+  }
+
+  #btn-calen-i {
+    margin-left: 400px;
+    z-index: 10;
+    position: relative;
+    top: -2rem;
+    left: -25rem;
+    font-size: 1.2rem;
+  }
+
+  #h12-i {
+      margin-left: 0;
+      text-align: right;
+  }
+
+
+
+  }
+
+
+
+
+  @media screen and (max-width: 865px) {
+
+    .laika-flex {
+      flex-direction: column;
+      margin-left: 30%;
+    }
+
+    .txt_intro a {
+      position: relative;
+      top: -6rem;
+    }
+
+    .laika_flex > h1 {
+          max-width: 60%;
+    }
+
+    .intro-txt2 {
+          left: -5%;
+    }
+
+    .index-presentation > img {
+    position: relative;
+    right: -5%;
+    top: -4px;
+}
+
+.i-menu p {
+        font-size: 1.3rem;
+    color: #E7CEF5;
+    max-width: 817px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.i-menu h1 {
+    font-size: 3rem;
+    color: #E7CEF5;
+    font-weight: bold;
+}
+
+
+  }
+
+
+  @media screen and (max-width: 420px) {
+  #pre-1 {
+    font-size: 1.5rem;
+  }
+  #pre-2 {
+    font-size: 1.5rem;
+  }
+  #pre-3 {
+    font-size: 1.5rem;
+  }
+
+  .txt_intro {
+    max-width: 80%;
+  }
+
+  .intro-txt2 {
+    left: 5%;
+  }
+
+  .laika-flex > h1{
+    font-size: 1.5rem;
+  }
+
+  #laika_debout {
+    width: 80%;
+  }
+
+  .laika-flex {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .pre-laika > p {
+    font-size: 20px;
+  }
+
+  .txt-menu1 {
+    margin-left: 5%;
+  }
+
+  .txt-menu2 {
+    margin-right: 5%;
+  }
+
+  .formulaire {
+    flex-direction: column;
+  }
+
+  .form-user {
+    width: 100%;
+  }
+
+  .formulaire-contact{
+    width: 100%;
+  }
+  .i-menu h1 {
+    font-size: 2rem;
+  }
+  #btn-creer-i{
+    right: 23rem;
+
+  }
+
+  .footer h1::after {
+    display: none;
+  }
+
+  .footer .reseaux::after {
+    display: none;
+  }
+
+  .footer img {
+    width: 40%;
+  }
+
+  .desc_diy{
+    flex-direction: column;
+    margin: 0;
+  }
