@@ -2,6 +2,7 @@
 <script type="text/javascript" src="/js/jquery.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/css/main.css">
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -13,7 +14,7 @@
 </head>
 
 
-<section class="main-header">
+<section class="main-header" id="main-header">
   <div class="logo-header">
 
     <a href="/"><img src="/img/logo/logo2.svg" alt="logo Celestia" ></a>
@@ -109,6 +110,15 @@
       <a href="https://www.instagram.com/celestia_lejeu/?hl=fr"><img src="/img/réseaux/insta.png" alt="instagram"> </a>
       <a href="https://www.facebook.com/Celestia-106968368153509"> <img src="/img/réseaux/fb.png" alt="facebook"> </a>
     </div>
+  </div>
+  <div class="net-link">
+    <h1>Navigation</h1>
+    <a href="/">Accueil</a>
+    <a href="/game">Le Jeu</a>
+    <a href="/creer">DIY</a>
+    <a href="/calendrier">Calendrier</a>
+    <a href="/contact">Contact</a>
+
   </div>
   <div class="ressource">
     <h1>Illustrations</h1>

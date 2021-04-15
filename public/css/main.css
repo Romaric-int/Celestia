@@ -38,17 +38,7 @@ body {
   transition-duration: 0.23s;
 }
 
-.footer h1::after{
-  content: "";
-  position: absolute;
-  background-color: white;
-  width: 1px;
-  height: 6rem;
-  right: 50%;
-  left: 45%;
 
-
-}
 
 .reseaux h1 {
   margin-bottom: 1rem;
@@ -60,18 +50,6 @@ body {
   text-decoration: underline;
 }
 
-.footer .reseaux::after{
-  content: "";
-  position: absolute;
-  background-color: white;
-  width: 1px;
-  height: 9rem;
-
-  left:75%;
-
-
-
-}
 
 .cont-bandes {
     width: 100%;
@@ -109,7 +87,7 @@ body {
 }
 .main-header {
   display: flex;
-
+  width: 100%;
   justify-content: space-between;
   position: relative;
 }
@@ -249,7 +227,7 @@ a {
 .ilu_contact{
 position: absolute;
 top: 15%;
-left: 60%;
+right: -20%;
 }
 .titre-contact {
   color: rgba(255, 255, 255, 0.7);
@@ -552,7 +530,10 @@ input[type=button]:hover {
 }
 
 #pre-1{
-  font-size: 35px;
+  font-size: 40px;
+
+  font-weight: bold;
+  color: #47488C;
   max-width: 540px;
 }
 #pre-2{
@@ -587,7 +568,8 @@ input[type=button]:hover {
   display: flex;
   position: relative;
   align-items: center;
-  margin-right: 10rem;
+  width: 90%;
+  margin: 0 auto;
   padding-top: 10rem;
 }
 .laika-flex >  h1 {
@@ -628,6 +610,12 @@ input[type=button]:hover {
 !
 !
 */
+
+
+.StoryConnect1 {
+    right: auto !important;
+    left:30% !important;
+}
 
 #trait-i {
   position: absolute;
@@ -807,7 +795,7 @@ input[type=button]:hover {
 
 .intro_diy {
   color: white;
-  margin-top: 100px;
+
   position: relative;
   margin-bottom: 200px;
 }
@@ -832,6 +820,7 @@ input[type=button]:hover {
 .div_introDIY1  h1 {
   font-size: 90px;
   font-weight: bold;
+  z-index: 50;
   margin-bottom: 40px;
 }
 
@@ -840,16 +829,17 @@ input[type=button]:hover {
 }
 
 .div_introDIY2 {
-  background-image: url("/img/diy/fill_diy.svg");
+  background-color: #303156;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 85%;;
+  top: 85%;
   left: 32%;
   width: 600px;
   height: 226px;
   background-size: cover;
-
+  box-shadow: 6px 5px 5px black;
+  border-radius: 25px;
 
 
 
@@ -857,6 +847,9 @@ input[type=button]:hover {
 
 
 }
+
+
+
 .div_introDIY2::before{
   filter: blur(2px);
 }
@@ -990,7 +983,7 @@ input[type=button]:hover {
 }
 
 .prep_diy img  {
-  width: 40%;
+  width: 35%;
 
 }
 
@@ -1008,7 +1001,7 @@ input[type=button]:hover {
 .expli_diy {
   display: flex;
   width: 90%;
-  margin-top: 150px;
+  margin-top: 80px;
   color: #303156 !important;
   padding-bottom: 50px;
 
@@ -1019,7 +1012,7 @@ input[type=button]:hover {
   width: 70%;
   border-top: 1px solid white;
   position: relative;
-  top: 70px;
+  top: 40px;
 
 
 
@@ -1041,7 +1034,7 @@ input[type=button]:hover {
   max-width: 294px;
   text-align: left;
   border-radius: 20px;
-  height: 450px;
+  height: 490px;
 
 }
 
@@ -1049,7 +1042,7 @@ input[type=button]:hover {
   margin-bottom: 20px;
 }
 .expli_diy li {
-  font-size: 20px;
+  font-size: 15px;
   max-width: 401px;
 
 }
@@ -1059,7 +1052,8 @@ input[type=button]:hover {
 }
 
 .expli_diy  h1{
-  font-size: 35px;
+  font-size: 27px;
+      margin-top: 20px;
 }
 
 .preparation > h1{
@@ -1181,7 +1175,7 @@ ul  {
   display:flex;
   position: relative;
   top: 28%;
-  width: 3700px;
+  width: 3500px;
   flex-wrap: nowrap;
   align-items: center;
   flex-direction: row;
@@ -1228,7 +1222,7 @@ ul  {
 .diego_help{
   position: relative;
   max-width: 13rem;
-  left: 2055px;
+  left: 1960px;
     top: 17rem;
 }
 
@@ -1278,14 +1272,16 @@ ul  {
   padding: 1rem 10rem 1rem 10rem;
   border-radius: 55px;
   position: fixed;
-  bottom: 5rem;
-  left: 30%;
+  bottom: 3rem;
+  left: 15%;
+  right: 15%;
+
   background-color: #D5C1ED;
   margin-top: 12rem;
   color: black;
   font-size: 1.3rem;
   font-weight: bold;
-  max-width: 30rem;
+
   display: flex;
   align-items: center;
 
@@ -1295,11 +1291,10 @@ ul  {
 .storyText img{
   margin-right: 4rem;
   margin-left: -8rem;
+  width: 8%;
 }
 
-.storyText p{
-  max-width: 50%;
-}
+
 
 
 /*page-vidéo*/
@@ -1351,7 +1346,7 @@ ul  {
 /* connexion */
 .container_connexion {
   background-color: #A793B2;
-  max-width: 30%;
+  max-width: 35%;
   border-radius: 30px;
   padding-top: 3rem;
   padding-bottom: 4rem;
@@ -1443,10 +1438,10 @@ ul  {
   content: '';
   position: absolute;
   background-color: #FFF;
-  width: 20rem;
-  height: 1px;
-  bottom: -10%;
-  left: 23%;
+  width: 75%;
+    height: 1px;
+    bottom: -10%;
+    left: 12%;
 
 }
 
@@ -1639,11 +1634,13 @@ input[type=password]{
   display: flex;
   align-items: center;
   background-image: url('/img/diy/intro_diy.svg');
-
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 5rem;
+  height: 709px;
   position: relative;
+
+  width: 90%;
+  border-radius: 60px;
 
 
 }
@@ -1657,12 +1654,14 @@ input[type=password]{
 }
 
 .txt_calender {
-  z-index: 20;
-  color: white;
-  left: 9rem;
-  margin-right: 15rem;
-  max-width: 35%;
+  max-width: 755px;
+  text-align: left;
   position: relative;
+  top: -5%;
+  left: 3%;
+  color: white;
+  z-index: 70;
+  margin-top: 8rem;
 
 }
 
@@ -1707,15 +1706,42 @@ input[type=password]{
 
 }
 .intro_calender .illu img{
-  width: 80%;
+  width: 85%;
   position: relative;
-  top: -2rem;
+
 }
 
 .quizz {
   display: flex;
   flex-direction: column;
   visibility: hidden;
+
+  }
+
+  .quizz .croix {
+    width: 5%;
+    position: relative;
+    left: 45%;
+    cursor: pointer;
+  }
+
+  .re-quizz {
+    position: fixed;
+    bottom: 4rem;
+    left: 4rem;
+    background-color: #F28DD1;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    transition-duration: 0.3s;
+    visibility: hidden;
+  }
+
+  .re-quizz:hover {
+    background-color: #A9478D;
+
   }
 
 .choices {
@@ -1858,6 +1884,28 @@ input[type=password]{
   }
 
 
+  .capitalize {
+  	text-transform: lowercase;
+  	display: inline-block;
+  }
+
+  .capitalize:first-letter {
+  	text-transform: capitalize;
+  }
+
+      .footer> div {
+    width: 25%;
+
+  }
+  
+  .net-link a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 30%;
+    margin-top: 0.1rem;
+}
+
+
 
 
   @media screen and (max-width: 1050px) {
@@ -1883,6 +1931,8 @@ input[type=password]{
     font-size: 22px;
 
   }
+
+
 
 
 
@@ -1958,7 +2008,251 @@ input[type=password]{
 
 
 
+@media screen and (max-width: 1650px) {
 
+    .diego_help {
+    position: relative;
+    max-width: 13rem;
+    left: 1755px;
+    top: 17rem;
+}
+
+  .flex-planet {
+    width: 3100px;
+  }
+  .storyText6 {
+    display: none;
+  }
+
+  .intro_diy {
+    margin-bottom: 6rem;
+  }
+
+  .stat_profil > img {
+    position: relative;
+    left: -5%;
+    width: 30%;
+    margin-right: 3rem;
+}
+
+  .les_diy{
+    width: 75%;
+  }
+
+  .solo_diy {
+    padding: 30px 0px 30px 0px;
+    flex-basis: 30%;
+  }
+
+  .solo_diy:nth-child(3) > div > img {
+    width: 15rem;
+}
+
+.solo_diy > div > img {
+  width: 16.4rem;
+}
+
+.solo_diy > div > h2{
+  font-size: 28px;
+}
+
+.solo_diy:nth-child(1) > div > img {
+  width: 15rem;
+}
+
+
+  .div_introDIY2 > h1 {
+    font-size: 4.5rem;
+    top: 25%;
+
+  }
+  .quizz {
+    left: 10rem;
+    top: 5rem;
+  }
+
+  .illu {
+    width: 50%;
+    margin-left: 4rem;
+  }
+
+  #pre-1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #47488C;
+  }
+  #pre-2 {
+    font-size: 1.3rem;
+  }
+  #pre-3 {
+    font-size: 1.3rem;
+  }
+
+  .laika-flex > h1 {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 2.3rem;
+
+  }
+  .intro_calender .illu img {
+    width: 100%;
+  position: relative;
+  top: 14%;
+  }
+
+  .page-header {
+    margin-left: 1rem;
+  }
+
+  .main-header > nav {
+    left: 0;
+  }
+
+  .profil-header{
+    padding: 0.7rem 1.6rem 0.7rem 1.6rem;
+  }
+  .logo-header{
+    left: 0;
+  }
+
+  .intro-txt2 > h1{
+    font-size: 90px;
+
+  }
+
+  .ilu_contact {
+    position: absolute;
+    top: 15%;
+
+    right: -15%;
+  }
+
+  .introduction h2 {
+    left: 13%;
+  }
+  .titre_log{
+    font-size: 4rem;
+  }
+
+  .intro-txt2{
+    left: 0;
+    top: 20%;
+  }
+
+  #h1laika2 {
+    max-width: 30%;
+
+  }
+
+  .pre-laika > p {
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+  }
+  .container_connexion .titre_log::after{
+    bottom: -25%;
+  }
+
+  .laika-flex{
+    padding-top: 5rem;
+    width: 90%;
+    margin: 0 auto;
+
+  }
+
+  .i-menu p{
+    font-size: 1.5rem;
+  }
+
+  .i-menu h1 {
+    font-size: 3rem;
+
+  }
+
+  .i-menu {
+        padding-bottom: 4rem;
+  }
+
+  .div_introDIY2{
+    height: 125px;
+    border-radius: 25px;
+    width: 500px;
+    box-shadow: 6px 5px 5px black;
+
+  }
+
+  .div_introDIY1  {
+    width: 75%;
+    height: 550px;
+    border-radius: 60px;
+  }
+
+  .div_introDIY1  > img {
+    position: relative;
+    top: -5rem;
+        width: 40%;
+  }
+
+  .div_introDIY1 h1{
+    font-size: 3.8rem;
+  }
+  .div_introDIY1 p {
+    font-size: 1.7rem;
+    margin-top: 0.7rem;
+  }
+  .div_introDIY2 > h1 {
+    font-size: 3.4rem;
+  }
+  .div_introDIY2 > svg {
+    position: absolute;
+    top: -17%;
+    width: 30%;
+    left: 48%;
+}
+
+
+  .intro_calender {
+    width: 75%;
+    border-radius: 60px;
+  }
+  .txt_calender h1 {
+    font-size: 3.8rem;
+    top: -5rem;
+  }
+    .txt_calender p{
+      font-size: 1.7rem;
+    }
+
+    .txt_calender{
+      max-width: 55%;
+      width: 50%;
+    }
+
+    .menu3 p {
+        max-width: 600px;
+    }
+    
+    .menu3 h1 {
+        max-width: 600px;
+    }
+    
+    .illu1 {
+        left: -47%;
+    }
+    
+    .illu2 {
+        right: -47%;
+    }
+    
+    .page-404 img {
+    position: relative;
+    width: 70%;
+}
+
+  .footer h1::after{
+    left: 50%;
+  }
+
+}
   @media screen and (max-width: 865px) {
 
     .laika-flex {

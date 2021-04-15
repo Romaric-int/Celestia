@@ -18,7 +18,8 @@
 
 
 
-    <div class="quizz quizz"  id="quiz{{$i}}">
+    <div class="quizz"  id="quiz{{$i}}">
+      <img class="croix" src="/img/game/croix.png" alt="croix">
       <h1>Quizz </h1>
       <h2><img src="/img/laika/tete_contente.png" width="70px" alt=""><span id="question{{$i}}" ></span></h2>
       <h3 id="score"></h3>
@@ -39,6 +40,8 @@
 
 
   @if(Auth::user()->step_story == $i && Auth::user()->step_vid != $i)
+
+    <a href="/game" class="re-quizz">Faire le quizz</a>
 
     <style media="screen">
       #quiz{{$i}} {
@@ -78,7 +81,10 @@
 @if(Auth::user()->step_vid == $p->id)
   <div class="storyText"> <img src="/img/laika/tete_contente.png" width='50%'alt=""> <p>{{$p->storyText}}</p></div>
 @elseif(Auth::user()->step_vid == 0)
-  <p class="storyText"> Intro </p>
+  <div class="storyText"><img src="/img/laika/tete_contente.png" width='50%'alt="">
+    <p>Laïka a besoin de toi pour retrouver son ami perdu autour de Saturne, Diego,
+     il a percuté un champ d’astéroïdes et les commandes de son vaisseau ne répondent plus.
+     <br> 3, 2, 1, DÉCOLLAGE ! </p></div>
 @endif
 
 @endforeach
@@ -197,6 +203,21 @@ for ($i=0; $i < 5; $i++) {
     display: none !important;
   }
 
+  .main-header {
+    width: 0 !important;
+  }
+
+  @media screen and (max-width: 1600px){
+  .main-header > nav {
+      left: 0;
+      margin-right: 3rem;
+  }
+
+  .logo-header {
+    margin-right: 6rem;
+    margin-left: 2rem;
+}
+}
 
 </style>
 

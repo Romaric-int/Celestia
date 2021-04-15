@@ -123,6 +123,7 @@
       </p>
 
     </div>
+    @csrf
     <div data-aos="fade-left" class="formulaire-contact">
       <form class="form-user" action="#" method="#">
         <div class="input-form">
@@ -145,8 +146,9 @@
           <label for="message">VOTRE MESSAGE*</label>
           <input class="mess" type="text" name="message" value="">
         </div>
-        </form>
         <input type="button" name="submit" value="Envoyer">
+        </form>
+
 
     </div>
   </div>
@@ -164,7 +166,9 @@
     background-color: #F28DD1 !important;
   }
   .main-header {
-      display: none !important;
+      position: fixed !important;
+      z-index: 200;
+      visibility: hidden;
     }
   body {
     overflow-y: hidden;

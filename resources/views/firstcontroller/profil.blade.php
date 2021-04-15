@@ -12,7 +12,7 @@
   <div class="info_profil">
 
 
-    <h1 class="nom_profil">{{ Auth::user()->name}} <br> {{Auth::user()->prenom }}</h1>
+    <h1 class="nom_profil"><span class='capitalize'>{{ Auth::user()->name}}</span> <br> <span class='capitalize'>{{ Auth::user()->prenom}}</span></h1>
     <p class='date_creat'>Petit astronaute depuis: {{$date}} jours</p>
   </div>
 

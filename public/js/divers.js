@@ -5,7 +5,14 @@ $( "#targetIndex" ).click(function() {
   $(".blur").css("filter","blur(0)");
   $(".blur").css("opacity","1");
   $("body").css("overflow-y","auto");
-  $(".main-header").css("display","block");
+  $("#main-header").css("visibility","visible");
+
+});
+
+$( ".croix" ).click(function() {
+  $( ".quizz" ).css("visibility","hidden");
+  $( ".re-quizz" ).css("visibility","visible");
+
 
 });
 

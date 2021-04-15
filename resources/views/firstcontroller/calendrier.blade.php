@@ -5,7 +5,7 @@
 
 <div class="intro_calender">
   <div class="txt_calender">
-    <h1>CALENDRIER</h1>
+    <h1>Calendrier</h1>
     <p>Une version simplifiée du calendrier arrive prochainement sur cette page !</br></br>
 
       En attendant, si tu souhaites savoir quand observer le ciel tu peux te rendre sur cette page:</p>
